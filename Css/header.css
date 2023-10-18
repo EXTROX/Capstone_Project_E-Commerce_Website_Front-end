@@ -1,0 +1,41 @@
+div .navbar-brand{
+    font-family: 'Cookie', cursive;
+    font-weight: bolder;
+    font-size:2rem;
+    color:cyan;
+    padding-left: 2%;
+}
+
+
+div .navbar-brand:hover{
+    scale:1.2;
+    color:cyan;
+    transition:1s ease-in-out;
+}
+.colorclass
+{
+    background-color:cyan!important;
+    color:black!important;
+}
+.colorclass:hover{
+    background-color: black!important;
+    color:cyan!important;
+}
+
+form .form-control{
+    border-radius:0;
+    border-bottom-left-radius: 8px !important;
+}
+
+form .changeradius
+{
+    border-radius:0;
+    border-top-right-radius: 8px !important;
+}
+
+.nav a:hover{
+    background-color: cyan;
+    color:black;
+}
+
+

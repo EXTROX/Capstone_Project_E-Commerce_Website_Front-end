@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .form-group {
+            font-weight: bold;
+        }
+
+        .ctn {
+            width: 70%;
+        }
+
+        .login {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* used to show the shadow of the text */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container flex-column mt-4 ctn"> <!--container class always consists of inbuilt d-flex-->
+        <div class="row">
+            <div class="col-4 mx-auto">
+                <h1 class="login">Login</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your E-mail" required>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your Password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-login w-100 mt-4 mb-4" onclick="login()"
+                        style="background-color: cyan;">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer is added at last of the body -->
+    <div id="footer"></div>
+
+    <script>
+        // JavaScript for login validation
+        function login() {
+            const email = document.getElementById("email").value;  // Get email and password values
+            const password = document.getElementById("password").value;
+
+            // Check if email and password are correct
+
+            if (email === "admin@admin.com" && password === "123456") {
+                alert("Login successful");
+            } else {
+                alert("Incorrect email or password");
+            }
+            document.getElementById("email").value = "";  // we can use either single quotes '' or double quotes "" .
+            document.getElementById("password").value = "";
+
+        }
+    </script>
+    <!-- jquery link is added -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- For getting jQuery, it's same like Bootstrap script. -->
+    <!-- first $ means document  and second $ means get element by id-->
+    <script>
+        $(function () {
+            $("#header").load("/Common/header.html");
+            $("#footer").load("/Common/footer.html");
+        });
+    </script>
+</body>
+
+</html>
